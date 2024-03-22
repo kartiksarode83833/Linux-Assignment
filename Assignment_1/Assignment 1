@@ -1,0 +1,143 @@
+1. List the directory contents date wise sorted. ( man ls)
+
+command ======> ls -lt
+
+2. List the directory contents size wise sorted.(man ls)
+
+command ======> ls -S
+
+3. List directory contents along with their inode no. 
+
+command ======> ls -i
+
+4. List the contents of the subdirectory.
+
+command ======> ls -R
+
+5. Create a file, write your surname and name in it and save.
+i. now open the same file and add your address in it and
+save.
+ii. reopen the same file and check your name and address in
+it.
+command ======> echo "Kartik Sarode" > my_file
+		vim "my_file"
+		cat "my_file"
+		
+6. how to change the time stamp of file (man touch)
+
+command ======> touch -t 202403210443.50 my_file.txt
+
+7. Create directory structure : Give following commands ,
+-> mkdir one
+-> cd one
+-> touch 1.txt 11.txt 111.txt
+-> mkdir two
+-> cd two
+-> touch 2.txt 22.txt 222.txt
+-> mkdir three
+-> cd three
+-> touch 3.txt 33.txt 333.txt
+-> mkdir four
+-> cd four
+-> touch 4.txt 44.txt 444.txt
+-> mkdir five
+-> cd five
+-> touch 5.txt 55.txt 555.txt
+-> cd ~ (i.e. go to your home directory)
+
+commands ======> 
+
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp$ mkdir one
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp$ cd one
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one$ touch 1.txt 11.txt 111.txt
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one$ mkdir two
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one$ cd two/
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two$ touch 2.txt 22.txt 222.txt
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two$ mkdir three 
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two$ cd three/
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three$ touch 3.txt 33.txt 333.txt
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three$ mkdir four
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three$ cd four/
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three/four$ touch 4.txt 44.txt 444.txt
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three/four$ mkdir five
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three/four$ cd five
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three/four/five$ touch 5.txt 55.txt 555.txt
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three/four/five$ 
+sunbeam@sunbeam-HP-Pavilion-Gaming-Laptop-15-ec2xxx:/tmp/one/two/three/four/five$ cd ~
+
+
+8. Considering above directory structure , Do following
+operations :
+i. list the directory contents of directory named
+"five" from current directory (i.e. home directory).
+
+command ======> cd one/two/three/four/five/ and ls -a
+
+ii. write your name in a file named "44.txt" of
+directory "four" from current directory.
+
+command ======> cd .. 
+		cat >> 44.txt 
+		write your name and press ctrl + D
+
+iii. remove the file named "555.txt" from directory
+"five" from current directory.
+
+command ======> cd five/ 
+		rm 555.txt
+
+iv. change directory to five (i.e. one/two/three/four/five/ ).		
+		
+command ======> cd one/two/three/four/five/
+		
+v. write your course name in file named "3.txt" which
+resides in directory "three" from current directory (i.e.
+five).also read the same file.
+
+command ======> cd ../..
+		cat >> 3.txt
+		write your course name and press ctrl + D
+
+vi. list the contents of directory "two" from current
+directory (i.e. five).
+
+command ======> cd one/two
+		ls -a
+		
+vii. remove file named "222.txt" which belongs to
+directory "two" from current directory (i.e. five)
+
+command ======> cd one/two
+		rm 222.txt
+		
+viii. now change the directory to "one"
+
+command ======> cd ..
+
+ix. remove all files only from directory named "five"
+from current directory (i.e. one)
+
+command ======> cd one/two/three/four/five
+		rm -rf
+
+x. remove directory named "five" from current directory
+(i.e. one)
+
+command ======> rm -rf /tmp/one/two/three/four/five
+
+xi. remove whole directory named "four" from current
+directory (i.e. one)
+
+command ======> rm -rf /tmp/one/two/three/four
+
+xii. change to your home directory.
+
+command ======> cd ~
+
+9. change the time stamp of file named "3.txt" which resides
+in directory named "three".(man touch)
+
+command ======> cd one/two/three/
+		touch -t 202403211806.10 3.txt
+
+
